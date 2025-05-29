@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f2f2f2;
+}
+form {
+  display: grid;
+  gap: 10px;
+}
+input, select, button {
+  padding: 10px;
+  font-size: 1em;
+}
+#summary {
+  margin-top: 20px;
+}

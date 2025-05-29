@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceWorker.js');
+  }
+</script>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  <form id="expense-form">
+    <input type="text" id="name" placeholder="Expense Name" required />
+    <input type="number" id="amount" placeholder="Amount" required />
+    <input type="date" id="date" required />
+    <select id="category">
+      <option>Food</option>
+      <option>Transport</option>
+      <option>Rent</option>
+      <option>Others</option>
+    </select>
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <div id="summary">
+    <h2>Total: ₹<span id="total">0</span></h2>
+    <div id="monthly"></div>
+    <div id="categorywise"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
